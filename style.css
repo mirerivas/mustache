@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 /* CSS Document */
 
 .mustache {
@@ -8,14 +8,14 @@
 	border-radius: 50%;
 	position: absolute;
 	color:black;
-	box-shadow: 
-	150px 240px 0 0 currentColor, 
+	box-shadow:
+	150px 240px 0 0 currentColor,
 	300px 240px 0 0 currentColor;
-	
-	} 
-	
+
+	}
+
 	.mustache::before {
-		
+
 		content: "";
 		position: absolute;
 		left: 30px;
@@ -26,11 +26,14 @@
 		border-radius: 0 0 0 100% ;
 		transform: rotate(-40deg);
 		transform-origin:right 210px;
-		
+		animation-iteration-count: infinite;
+		animation-name: mustache;
+		animation-duration: 3s;
+
 		}
-		
+
 		.mustache::after{
-		
+
 		content: "";
 		position: absolute;
 		left: 390px;
@@ -39,11 +42,21 @@
 		height: 120px;
 		border-bottom: solid 180px        currentColor;
 		border-radius: 0 0 100% 0;
-		transform: rotate(40deg);
+		transform: rotate(45deg);
 		transform-origin:left 210px;
-		
+		animation-iteration-count: infinite;
+		animation-name: mustache;
+		animation-duration: 3s;
+
+
 		}
-		
-	
-		
+
+		@keyframes mustache {
+    10% {
+      transform: scale(1) rotate(5deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(deg);
+    }
+  }
 	
